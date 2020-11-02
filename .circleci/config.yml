@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  heroku: circleci/heroku@0.0.10
+
+jobs:
+  build:
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run: 
+          name: Install Dependencies
+          command: npm install
+
+      - run: 
+          name: Run Eslint
+          command: npm run eslint:fix
+      
+      - run:
+          name: Run Tests
+          command: npm run test
+
+      - run: 
+          name: Build Application
+          command: npm run build
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
