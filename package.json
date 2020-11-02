@@ -5,12 +5,17 @@
   "main": "src/server.ts",
   "scripts": {
     "build": "tsc",
-    "start": "PORT=3000 nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts",
+    "start": "node dist/server.js",
+    "start:dev": "PORT=3000 nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts",
     "test": "jest --coverage --no-cache --verbose",
-    "test:watch": "jest --watchAll --coverage --no-cache --verbose"
+    "test:watch": "jest --watchAll --coverage --no-cache --verbose",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "^14.14.6"
+  },
   "dependencies": {
     "@types/swagger-jsdoc": "^3.0.2",
     "@types/swagger-ui-express": "^4.1.2",
