@@ -13,6 +13,7 @@ Tabela de Conteúdos
     * [Local](#instalacao-local)
     * [Docker](#instalacao-docker)
   * [Como funciona](#como-funciona)
+  * [Documentação e Demo](#documentação)
   * [Testes](#testes)
   * [Features](#features)
   * [Considerações](#consideracoes)
@@ -32,6 +33,10 @@ Tabela de Conteúdos
   * Jest
   * Eslint
   * Nodemon
+#### Infra e CI
+  * Heroku
+  * MongoDB
+  * CircleCI
 
 ## Pré-requisitos <a name="pre-requisitos"></a>
   * Node 14
@@ -122,6 +127,13 @@ Injetado todos os recursos necessários, bancos, controllers, repositórios, han
 
 Após isso, a aplicação está pronta para rodar e é executado o método `listen` onde começa a escutar uma porta dentro do SO.
 
+## Documentação e Demo <a name="documentacao"></a>
+É possível consultar a documentação da API [aqui](https://redirect-shorten-url.herokuapp.com/docs/).
+
+A Demo se encontra na seguinte url:
+https://redirect-shorten-url.herokuapp.com/
+
+
 ## Testes <a name="testes"></a>
 Os testes foram feitos principalmente no core do modelo de negócios, tendo alguns arquivos ainda faltando testes.
 
@@ -138,29 +150,29 @@ npm run test:watch
 ```
 
 ## Features <a name="features"></a>
-[x] Configuração e estruturação inicial do projeto
-[x] Configurar Eslint
-[x] Configurar Testes
-[x] Configurar Controllers
-[x] Configurar Handlers
-[x] Configurar Repositories
-[x] Configurar Helpers
-[x] Configurar Banco de dados
-[x] Aplicar Injeção de Dependência e IoC
-[x] Aplicar Repository Pattern
-[x] Aplicar MVC
-[x] Criar swagger
-[x] Configurar docker e docker-compose
-[ ] Configurar hospedagem
-[ ] Configurar CI/CD
+- [x] Configuração e estruturação inicial do projeto
+- [x] Configurar Eslint
+- [x] Configurar Testes
+- [x] Configurar Controllers
+- [x] Configurar Handlers
+- [x] Configurar Repositories
+- [x] Configurar Helpers
+- [x] Configurar Banco de dados
+- [x] Aplicar Injeção de Dependência e IoC
+- [x] Aplicar Repository Pattern
+- [x] Aplicar MVC
+- [x] Criar swagger
+- [x] Configurar docker e docker-compose
+- [x] Configurar hospedagem
+- [x] Configurar CI/CD
 
 Melhorias
-[ ] Melhorar inversão de controle em `src/app.ts`
-[ ] Aplicar testes de unidade no restante da aplicação
-[ ] Aplicar testes de integração
-[ ] Aplicar testes de carga
-[ ] Adicionar alguma plataforma de code analysis (Codacy ou outro)
-[ ] Adicionar badges no readme
+- [ ] Melhorar inversão de controle em `src/app.ts`
+- [ ] Aplicar testes de unidade no restante da aplicação
+- [ ] Aplicar testes de integração
+- [ ] Aplicar testes de carga
+- [ ] Adicionar alguma plataforma de code analysis (Codacy ou outro)
+- [ ] Adicionar badges no readme
 
 ## Considerações <a name="consideracoes"></a>
 Algumas considerações sobre a aplicação.
@@ -174,7 +186,7 @@ Boa parte da aplicação está com IoC, fazendo com que facilite os testes e ten
 Porém há algumas exceções:
  * Os controllers estão usando tipos não abstraídos vindo direto do express.js.
  * O arquivo principal `app.ts` usa diretamente libs e middlewares em sua implementação, quebrando parcialmente esse pattern.
- * Foram utilizadas classes abstratas ao invés de interfaces, devido a limitação do Typescript, já que interfaces só existem em build-time.
+ * Foram utilizadas classes abstratas ao invés de interfaces, devido a limitação do Typescript, já que interfaces só existem em build-time, e por escolha pessoal opitei por não utilizar Symbols para usar como Token DI, já que isso aumenta a complexidade do código e dificulta a manutenção.
 
 ##### Repository Pattern
 Para conseguir uma fácil mudança de banco de dados ou até outros modelos de persistências, foi usado o Repository Pattern junto com DI e IoC para cumprir esse objetivo.
