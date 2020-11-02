@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "^14.14.6"
+    "node": "^14.15"
   },
   "dependencies": {
     "@types/swagger-jsdoc": "^3.0.2",

@@ -24,8 +24,8 @@ describe('Url Controller', () => {
       const req = {
         body: { url: 'https://google.com/search?q=gold+d.+roger' },
         protocol: 'http',
-        host: 'teste.com',
-      } as express.Request;
+        get: jest.fn((x) => (x === 'host' ? 'teste.com' : null)),
+      } as unknown as express.Request;
 
       const res = {
         status: jest.fn().mockReturnThis(),
