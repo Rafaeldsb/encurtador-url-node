@@ -13,7 +13,7 @@ Tabela de Conteúdos
     * [Local](#instalacao-local)
     * [Docker](#instalacao-docker)
   * [Como funciona](#como-funciona)
-  * [Documentação e Demo](#documentação)
+  * [Documentação e Demo](#documentacao)
   * [Testes](#testes)
   * [Features](#features)
   * [Considerações](#consideracoes)
@@ -172,6 +172,7 @@ Melhorias
 - [ ] Aplicar testes de integração
 - [ ] Aplicar testes de carga
 - [ ] Adicionar alguma plataforma de code analysis (Codacy ou outro)
+- [ ] Adicionar uma camada de cache nas consultas das url encurtadas
 - [ ] Adicionar badges no readme
 
 ## Considerações <a name="consideracoes"></a>
@@ -198,3 +199,7 @@ As implementações dos testes estão sendo feitas sem utilizar o DRY, justament
 Os testes foram implementados em apenas alguns arquivos mais importantes, então o coverage até o momento está baixo.
 
 Outro ponto é que há somente testes de unidades, faltando outros tipos de testes para complementar a qualidade.
+
+
+#### Outros <a name="consideracoes-outros"></a>
+Dependendo do modelo de negócio e perspectiva de crescimento (o que não está tratado nesta aplicação) é possível que esta esteja com over-engineering. Em um cenário mais simplista, talvez não haja a necessidade de inserir uma camada de infraestrutura e de Repository Pattern, mas isso é totalmente dependente do modelo real que precisa ser implementado. Mesmo sendo somente um Encurtador de URL, não é possível afirmar o modelo sem essa perspectiva bem claro.
