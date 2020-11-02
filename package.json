@@ -1,8 +1,8 @@
 {
-  "name": "wiser-teste-backend",
+  "name": "encurtador-url",
   "version": "1.0.0",
-  "description": "Teste de backend da Wiser",
-  "main": "index.js",
+  "description": "Encurtador e redirecionador de URL",
+  "main": "src/server.ts",
   "scripts": {
     "build": "tsc",
     "start": "PORT=3000 nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts",
