@@ -5,6 +5,9 @@ orbs:
 
 jobs:
   build:
+    docker:
+      - image: circleci/node:14.14.6
+    working_directory: ~/repo
     steps:
       - checkout
 
