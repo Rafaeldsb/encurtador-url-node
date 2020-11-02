@@ -8,8 +8,7 @@
     "start": "node dist/server.js",
     "start:dev": "PORT=3000 nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts",
     "test": "jest --coverage --no-cache --verbose",
-    "test:watch": "jest --watchAll --coverage --no-cache --verbose",
-    "postinstall": "npm run build"
+    "test:watch": "jest --watchAll --coverage --no-cache --verbose"
   },
   "author": "",
   "license": "ISC",
