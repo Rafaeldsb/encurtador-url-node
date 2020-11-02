@@ -59,7 +59,7 @@ export class UrlController extends Controller {
 
     const model = await this.addUrlHandler.execute({
       url,
-      req: { host: req.get('host') as string, protocol: req.protocol }
+      req: { host: req.get('host') as string, protocol: req.protocol },
     });
 
     res.status(201);

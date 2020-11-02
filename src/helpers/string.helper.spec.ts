@@ -36,5 +36,5 @@ describe('StringHelper', () => {
 
       expect(codeFn).toThrowError();
     });
-  })
+  });
 });

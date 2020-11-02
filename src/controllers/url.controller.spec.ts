@@ -1,6 +1,4 @@
 import express from 'express';
-import { AddUrlHandler } from '../handlers/url/add-url.handler';
-import { GetUrlByCodeHandler } from '../handlers/url/get-url-by-code.handler';
 import { Url } from '../models/url.model';
 import { UrlController } from './url.controller';
 
@@ -13,7 +11,7 @@ describe('Url Controller', () => {
         execute: () => new Url({
           code: 'abcde123',
           shortenedUrl: 'http://teste.com/abcde123',
-          originalUrl: 'https://google.com/search?q=gold+d.+roger'
+          originalUrl: 'https://google.com/search?q=gold+d.+roger',
         }),
       }));
       const MockGetUrlByCodeHandler = jest.fn();
@@ -68,7 +66,7 @@ describe('Url Controller', () => {
         execute: () => new Url({
           code: 'abcde123',
           shortenedUrl: 'http://teste.com/abcde123',
-          originalUrl: 'https://google.com/search?q=gold+d.+roger'
+          originalUrl: 'https://google.com/search?q=gold+d.+roger',
         }),
       }));
 
