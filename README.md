@@ -5,22 +5,21 @@
 Projeto em node para encurtar URL e redirecionar para a URL original.
 
 ## Tabela de Conteúdos
-=================
-  * [Descrição](#descricao)
-  * [Tabela de Conteúdos](#tabela-conteudo)
-  * [Tecnologias](#tecnologias)
-  * [Pré-requisitos](#pre-requisitos)
-  * [Instalação e uso](#instalacao)
-    * [Local](#instalacao-local)
-    * [Docker](#instalacao-docker)
-  * [Como funciona](#como-funciona)
-  * [Documentação e Demo](#documentacao)
-  * [Testes](#testes)
-  * [Features](#features)
-  * [Considerações](#consideracoes)
-    * [Design Patterns](#consideracoes-design-patterns)
-    * [Testes](#consideracoes-design-patterns)
-    * [Outros](#consideracoes-outros)
+* [Descrição](#descricao)
+* [Tabela de Conteúdos](#tabela-conteudo)
+* [Tecnologias](#tecnologias)
+* [Pré-requisitos](#pre-requisitos)
+* [Instalação e uso](#instalacao)
+  * [Local](#instalacao-local)
+  * [Docker](#instalacao-docker)
+* [Como funciona](#como-funciona)
+* [Documentação e Demo](#documentacao)
+* [Testes](#testes)
+* [Features](#features)
+* [Considerações](#consideracoes)
+  * [Design Patterns](#consideracoes-design-patterns)
+  * [Testes](#consideracoes-design-patterns)
+  * [Outros](#consideracoes-outros)
 
 ## Tecnologias<a name="tecnologias"></a>
 #### Runtime
