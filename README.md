@@ -4,7 +4,7 @@
 ## Descrição<a name="descricao"></a>
 Projeto em node para encurtar URL e redirecionar para a URL original.
 
-Tabela de Conteúdos
+## Tabela de Conteúdos
 =================
   * [Descrição](#descricao)
   * [Tabela de Conteúdos](#tabela-conteudo)
