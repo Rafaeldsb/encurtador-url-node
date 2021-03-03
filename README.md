@@ -1,4 +1,5 @@
 # Encurtador de URL
+![CircleCI](https://img.shields.io/circleci/build/github/Rafaeldsb/encurtador-url-node/master?token=7250cd3a7d3535a5427fb369c4656a9dbec69ead) ![Codacy coverage](https://img.shields.io/codacy/coverage/53bde3ccfb3346bd8cf7fcd9fe459c1a) ![Codacy coverage](https://img.shields.io/codacy/grade/53bde3ccfb3346bd8cf7fcd9fe459c1a)
 
 ## Descrição<a name="descricao"></a>
 Projeto em node para encurtar URL e redirecionar para a URL original.

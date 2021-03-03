@@ -32,6 +32,10 @@ jobs:
           name: Build Application
           command: npm run build
 
+      - run:
+          name: Send Coverage Report to Codacy
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report
+
       - save_cache:
           paths:
             - node_modules

@@ -12,5 +12,7 @@ module.exports = {
   ],
   coverageReporters: [
     'text-summary',
+    'text',
+    'clover',
   ],
 };
