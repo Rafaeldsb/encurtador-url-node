@@ -165,15 +165,15 @@ npm run test:watch
 - [x] Configurar docker e docker-compose
 - [x] Configurar hospedagem
 - [x] Configurar CI/CD
+- [x] Adicionar badges no readme
+- [x] Adicionar alguma plataforma de code analysis (Codacy)
 
 Melhorias
 - [ ] Melhorar inversão de controle em `src/app.ts`
 - [ ] Aplicar testes de unidade no restante da aplicação
 - [ ] Aplicar testes de integração
 - [ ] Aplicar testes de carga
-- [ ] Adicionar alguma plataforma de code analysis (Codacy ou outro)
 - [ ] Adicionar uma camada de cache nas consultas das url encurtadas
-- [ ] Adicionar badges no readme
 
 ## Considerações <a name="consideracoes"></a>
 Algumas considerações sobre a aplicação.
